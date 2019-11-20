@@ -1,9 +1,11 @@
 def give_back_x_y(temp)
   ans = []
   temp.each do |ele|
+    # Antoine equations for wach component
     antoine_for_acetone = 7.11714 - (1210.595 / (ele + 229.664))
-    p_acetone = 10**antoine_for_acetone
     antoine_for_ethanol = 8.11220 - (1592.864 / (ele + 226.184))
+    # Vapor pressure for each component
+    p_acetone = 10**antoine_for_acetone
     p_ethanol = 10**antoine_for_ethanol
     x = (760 - p_ethanol) / (p_acetone - p_ethanol) # fraction of acetone in liquid
     y = (p_acetone * x) / 760 # fraction of acetone in gas
