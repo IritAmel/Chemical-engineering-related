@@ -1,6 +1,5 @@
 def give_back_x_y(temps)
-  ans = []
-  temp.each do |temp|
+  temps.each do |temp|
     # Antoine equations for wach component
     antoine_for_acetone = 7.11714 - (1210.595 / (temp + 229.664))
     antoine_for_ethanol = 8.11220 - (1592.864 / (temp + 226.184))
